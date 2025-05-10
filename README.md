@@ -3,7 +3,7 @@
 ![Spotify Logo](https://github.com/najirh/najirh-Spotify-Data-Analysis-using-SQL/blob/main/spotify_logo.jpg)
 
 ## Overview
-This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, performing SQL queries of varying complexity (easy, medium, and advanced), and optimizing query performance. The primary goals of the project are to practice advanced SQL skills and generate valuable insights from the dataset.
+This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, performing SQL queries of varying complexity (easy, medium, and advanced). The primary goals of the project are to practice advanced SQL skills and generate valuable insights from the dataset.
 
 ```sql
 -- create table
@@ -55,7 +55,7 @@ After the data is inserted, various SQL queries can be written to explore and an
 - More complex queries involving grouping, aggregation functions, and joins.
   
 #### Advanced Queries
-- Nested subqueries, window functions, CTEs, and performance optimization.
+- Nested subqueries, window functions, CTEs.
   
 ---
 
@@ -110,6 +110,7 @@ ORDER BY 2 DESC
 LIMIT 5;
 ```
 3. List all tracks along with their views and likes where `official_video = TRUE`.
+```sql
 SELECT track, 
 SUM(views) AS total_views, 
 SUM(likes) AS total_likes
@@ -117,6 +118,7 @@ FROM spotify
 WHERE official_video = 'TRUE'
 GROUP BY 1
 ORDER BY 2 DESC;
+```
 4. For each album, calculate the total views of all associated tracks.
 ```sql
 SELECT album, track, SUM(views)
@@ -180,7 +182,6 @@ SELECT
 FROM cte
 ORDER BY 2 DESC
 ```
-   
 4. Find tracks where the energy-to-liveness ratio is greater than 1.2.
 ```sql
 SELECT track, 
