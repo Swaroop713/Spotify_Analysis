@@ -84,8 +84,9 @@ WHERE licensed = 'TRUE';
 ```
 4. Find all tracks that belong to the album type `single`.
 ```sql
-```SELECT track FROM spotify
+SELECT track FROM spotify
 WHERE album_type = 'single'; 
+```
 5. Count the total number of tracks by each artist.
 ``sql
 SELECT artist, COUNT(track) AS total_songs
