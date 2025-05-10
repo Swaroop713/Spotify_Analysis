@@ -86,7 +86,7 @@ SELECT track FROM spotify
 WHERE album_type = 'single'; 
 ```
 5. Count the total number of tracks by each artist.
-``sql
+```sql
 SELECT artist, COUNT(track) AS total_songs
 FROM spotify
 GROUP BY 1
